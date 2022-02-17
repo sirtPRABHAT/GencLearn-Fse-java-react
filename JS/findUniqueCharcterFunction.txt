@@ -1,0 +1,24 @@
+script.js
+    1 function modifyString(str)
+    2 {
+    3     var res = "";
+    4     for(var i in str){
+    5         if(!(str[i] == " ")){
+    6             res += str[i];
+    7         }
+    8     }
+    9     return res.toLowerCase();
+   10 }
+   11 
+   12 function uniqueCharacters(str)
+   13 {
+   14     var res = "";
+   15     for(var i in str){
+   16         if(!res.includes(str[i])){
+   17             res += str[i];
+   18         }
+   19     }
+   20     return modifyString(res);
+   21 }  
+   22 
+   23 

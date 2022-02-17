@@ -1,0 +1,143 @@
+1 <!DOCTYPE HTML>
+    2 <html>
+    3     <head>
+    4         <title>Trainer's Feedback Rating Chart</title>
+    5      <link rel="stylesheet" href="trainerfeedbackchart.css">
+    6     </head>
+    7     <body>
+    8     
+    9       <div class="foot">
+   10         <form>
+   11         
+   12         <h1>Trainer's Feedback Rating Chart</h1>
+   13        
+   14 		    <table id="chart">
+   15 		    	<caption>Trainer's Name: Elite Parker</caption>		      
+   16 		        <tr class="theader" >
+   17 		            <th>S.No.</th>
+   18 		            <th>Training Module Name</th>
+   19 	                <th>Overall Rating</th>
+   20 		             <th>Feedback</th>
+   21 		        </tr>
+   22 		        <tr class="tr1" >
+   23 		        	<td>1</td>
+   24 		            <td>HTML5, CSS3, JavaScript</td>
+   25 		            <td>5</td>
+   26 		            <td id="ex1" >Excellent</td>
+   27 		            
+   28 		        </tr>
+   29 		        <tr class="tr2">
+   30 		        	<td>2</td>
+   31 		            <td>Basic Java Programming</td>
+   32 		            <td>4</td>
+   33 		             <td id="vg1">Very Good</td>
+   34 		        </tr>
+   35 		        <tr class="tr1">
+   36 		        	<td>3</td>
+   37 		            <td>Advanced Java Programming</td>
+   38 		            <td>3</td>
+   39 		             <td id="go1">Good</td>
+   40 		        </tr>
+   41 		         <tr class="tr2">
+   42 		        	<td>4</td>
+   43 		            <td>UNIX Shell Scripting</td>
+   44 		            <td>2</td>
+   45 		             <td id="av1">Average</td>
+   46 		        </tr>
+   47 		         <tr class="tr1">
+   48 		        	<td>5</td>
+   49 		            <td>Python Programming</td>
+   50 		            <td>1</td>
+   51 		             <td id="ba1" >Below Average</td>
+   52 		        </tr>
+   53 		    </table>
+   54    		
+   55           </form>
+   56         </div> 
+   57       
+   58     </body>
+   59 </html>
+trainerfeedbackchart.css
+    1  h1{
+    2       
+    3     text-align: center;
+    4     color: #FF00FF;
+    5     font-style: italic;
+    6       
+    7  }
+    8 
+    9  table{
+   10   
+   11      text-align: left;
+   12      margin-left: 35%;
+   13      background-color: #F0F0F0;
+   14      
+   15 
+   16  }
+   17  
+   18  td{
+   19  
+   20     text-align: center
+   21  
+   22  }
+   23  
+   24  caption {
+   25  	
+   26  	 text-align: left;
+   27  	 font-weight: bold;
+   28  	
+   29  	
+   30  }
+   31  
+   32  
+   33  .theader {
+   34  	
+   35  	background-color: #800000;
+   36  	color: #ffffff;
+   37  	
+   38  }
+   39  
+   40  .tr1{
+   41      
+   42  	 background-color: #ff0080;
+   43  
+   44      
+   45  }
+   46  
+   47  /*.tr2{*/
+   48      
+   49  	 /* Wrtie code for css values here */ 
+   50  
+   51      
+   52  /*}*/
+   53  
+   54  #ex1, #vg1{
+   55      
+   56  	 background-color: #00ff00;
+   57  
+   58      
+   59  }
+   60  
+   61  #go1{
+   62      
+   63     background-color: #ffff00;
+   64  
+   65      
+   66  }
+   67  
+   68  #av1{
+   69      
+   70  	background-color: #d3d3d3;
+   71  	color: #ffffff;
+   72  
+   73      
+   74  }
+   75  
+   76   #ba1{
+   77       
+   78     background-color: #ff0000;
+   79     color: #ffffff;
+   80       
+   81   }
+   82 
+   83  

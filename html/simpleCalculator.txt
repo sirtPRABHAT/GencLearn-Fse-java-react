@@ -1,0 +1,39 @@
+Calculator.html
+    1 <!DOCTYPE html>
+    2 <html>
+    3   <head>
+    4     <title>Calculator</title>
+    5   </head>
+    6   <body>
+    7       
+    8       <div>
+    9         <center>
+   10             <!-- html 4 element, deprectaed in html 5 -->
+   11             <font size="20" color="blue">Calculator</font><br>
+   12 
+   13         </center>
+   14             <form style="margin: auto; width: 400px;">
+   15                 <img alt="calculator" height="300" width="400" src="calculator.jpg" />
+   16                 <br><br>
+   17                 <label for="input1">input1</label>
+   18                 <!-- used this due to constraint of not using css -->
+   19                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   20                 <input type="number" id="input1" name="input1"><br><br>
+   21                 <label for="input2">input2</label>
+   22                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   23                 <input type="number" id="input2" name="input2"><br><br>
+   24                 <label for="operation">Select Operation</label>&nbsp;&nbsp;&nbsp;
+   25                     <select name="operation" id="operation">
+   26                         <option value="Select..">Select..</option>
+   27                         <option value="ADD">ADD</option>
+   28                         <option value="SUBTRACT">SUBTRACT</option>
+   29                         <option value="MULTIPLY">MULTIPLY</option>
+   30                         <option value="DIVIDE">DIVIDE</option>
+   31                     </select><br><br>
+   32                     <img alt="submit" height="80px" width="80px" src="calc.jpg" />
+   33                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   34                     <img alt="reset" height="80px" width="80px" src="reset.jpg" />
+   35               </form>
+   36       </div>
+   37   </body>
+   38 </html>

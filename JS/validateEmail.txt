@@ -1,0 +1,14 @@
+script.js
+    1 function validateEmail(email) {
+    2    const regex =  new RegExp(/\S+[@]\S+\.com$/);
+    3    //anystring@anystring.com
+    4 	
+    5 	if(regex.test(email)){
+    6 	    return "Valid email address!";
+    7 	}else{
+    8 	    return "Invalid email address!";
+    9 	}
+   10 
+   11 }
+   12 
+   13 

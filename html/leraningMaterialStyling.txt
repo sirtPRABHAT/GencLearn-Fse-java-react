@@ -1,0 +1,110 @@
+LearningMaterial.html
+    1 <!DOCTYPE html>
+    2 <html>
+    3 <head>
+    4 
+    5  <link rel="stylesheet" href="LearningMaterial.css">
+    6 
+    7 </head>
+    8 <body>
+    9 	<h1>Why to Learn java Programming?</h1>
+   10 	<div>
+   11 		<p title="Java Programming">Java is a MUST for students and working professionals
+   12 			to become a great Software Engineer specially when they are working
+   13 			in Software Development Domain. I will list down some of the key
+   14 			advantages of learning Java Programming:</p>
+   15 
+   16 		<dl>
+   17 			<dt class="reasons">Object Oriented</dt>
+   18 			<dd id="description01">In Java, everything is an Object. Java can be easily
+   19 				extended since it is based on the Object model.</dd>
+   20 			<dt class="reasons">Platform Independent</dt>
+   21 			<dd id="description02">Unlike many other programming languages including C and C++,
+   22 				when Java is compiled, it is not compiled into platform specific
+   23 				machine, rather into platform independent byte code. This byte code
+   24 				is distributed over the web and interpreted by the Virtual Machine
+   25 				(JVM) on whichever platform it is being run on.</dd>
+   26 
+   27 			<dt class="reasons">Simple</dt>
+   28 			<dd id="description03">Java is designed to be easy to learn. If you understand the
+   29 				basic concept of <em>OOP Java</em>, it would be easy to master.</dd>
+   30 			<dt class="reasons">Secure</dt>
+   31 			<dd id="description04">With Java's secure feature it enables to develop virus-free,
+   32 				tamper-free systems. Authentication techniques are based on
+   33 				public-key encryption.</dd>
+   34 			<dt class="reasons" >Architecture-neutral</dt>
+   35 			<dd id="description05">Java compiler generates an architecture-neutral object file
+   36 				format, which makes the compiled code executable on many processors,
+   37 				with the presence of Java runtime system.</dd>
+   38 			<dt class="reasons" >Portable</dt>
+   39 			<dd id="description06">Being architecture-neutral and having no implementation
+   40 				dependent aspects of the specification makes Java portable. <em>Compiler
+   41 				in Java is written in ANSI C</em> with a clean portability boundary,
+   42 				which is a POSIX subset.</dd>
+   43 			<dt class="reasons">Robust</dt>
+   44 			<dd id="description07">Java makes an effort to eliminate error prone situations by
+   45 				emphasizing mainly on compile time error checking and runtime
+   46 				checking.</dd>
+   47 
+   48 		</dl>
+   49 
+   50 
+   51 
+   52 	</div>
+   53 
+   54 
+   55 </body>
+   56 </html>
+LearningMaterial.css
+    1 
+    2 /*
+    3         Write css code here with appropriate CSS Selectors  and CSS property/values.
+    4         Refer specification details description for more information.
+    5 
+    6 */
+    7 
+    8 body {
+    9     background-color: #00FFFF;
+   10     font-family: Arial;
+   11     font-size: 12px;
+   12 }
+   13 
+   14 h1{
+   15     font-size: 2.5em;
+   16 }
+   17 
+   18 dd{
+   19     font-size: 1.5em;
+   20 }
+   21 
+   22 p[title]{
+   23     color: #FF0000;
+   24     font-size: 1.7em;
+   25     line-height: 1.5;
+   26 }
+   27 
+   28 .reasons{
+   29     color: #FF0F70;
+   30     font-weight: bold;
+   31     line-height: 1.5;
+   32     font-size: 1.5em
+   33 }
+   34 
+   35 
+   36 
+   37 #description01 {
+   38     font-style: italic;
+   39     color: #F500FF;
+   40 }
+   41 
+   42 #description07 {
+   43     font-style: italic;
+   44     color: #FF4500;
+   45     font-weight: bold;
+   46 }
+   47 
+   48 em{
+   49     color: #FF0000;
+   50     font-weight: bold;
+   51 }
+   52 

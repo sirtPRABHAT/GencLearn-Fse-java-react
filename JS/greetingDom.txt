@@ -1,0 +1,58 @@
+index.html
+    1 <!DOCTYPE HTML>
+    2 <html>
+    3 	<head>
+    4         <title></title>
+    5         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    6         <style>
+    7             table, tr, td{
+    8                 border: 1px solid black;
+    9             }
+   10         </style>
+   11     </head>
+   12     
+   13   <body> 
+   14     <div style="width: 600px; margin: auto;">
+   15         <h1>Elite Coaching Center</h1>
+   16 
+   17         <table>
+   18 
+   19             <tr>
+   20                 <td>Student Name</td>
+   21                 <td><input type="text" id="sname" required></td>
+   22             </tr>
+   23             <tr>
+   24                 <td>Course</td>
+   25                 <td>
+   26                     <select id="course" required>
+   27                         
+   28                         <option value="Python">Python</option>
+   29                         <option value="Java">Java</option>
+   30                         <option value="Oracle">Oracle</option>
+   31                     </select>
+   32                 </td>
+   33             </tr>
+   34         </table><br>
+   35         <input type="button"  id="submit" value="Register" onclick="display()">
+   36         <div  id="greet"></div>
+   37 
+   38         
+   39     </div>
+   40 
+   41     <script src="script.js"> </script>
+   42   </body>
+   43 </html>
+   44 
+script.js
+    1 function display(){
+    2 
+    3     var name = document.getElementById("sname").value;
+    4     var course = document.getElementById("course").value;
+    5 
+    6     if(!(name.length == 0)){
+    7         document.getElementById("greet").innerHTML =  "<p>Hi, "+ name + ". You have successfully registered for the " + course + " course.</p>";
+    8     }else{
+    9         document.getElementById("greet").innerHTML =  "<p>Name cannot be empty</p>";
+   10     }
+   11    
+   12 }

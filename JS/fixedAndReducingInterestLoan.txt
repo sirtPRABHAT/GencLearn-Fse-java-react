@@ -1,0 +1,166 @@
+ReducedInterestEstimation.html
+    1 <!DOCTYPE html>
+    2 <html>
+    3   <head>
+    4      <title>Reducing Interest Loan Estimation</title>
+    5     
+    6  
+    7     <style type="text/css">
+    8         h2 {
+    9         	text-align: center;
+   10         	color: #FF0000;
+   11         	font-style: italic;
+   12         	font-weight: bold;
+   13         }
+   14         
+   15         table  {
+   16         	text-align: left;
+   17         	background-color: #FFE77A;
+   18         	padding: 10px;
+   19         	
+   20         }
+   21         
+   22         #tablemain{
+   23         	margin-left: 35%;
+   24         	
+   25         }
+   26         
+   27         #Estimate  {
+   28         	 background-color: #F1F334;
+   29         	 color: #000000; 
+   30         	 font-size: 15px; 
+   31         	 height: 35px; 
+   32         	 width: 100px;
+   33         	 
+   34         }
+   35         .t th td {
+   36             border: 1px solid black;
+   37         }
+   38     </style>
+   39 
+   40   </head>
+   41   <body>
+   42     
+   43     <h2>Reducing Interest Loan Estimation</h2>  
+   44     
+   45 	<table id="tablemain" >
+   46 	
+   47 	   	<tbody>
+   48 		   <tr> 
+   49 		    <td>	
+   50 					<table>
+   51 						<tbody>
+   52 							<tr>
+   53 								<td>Principal Loan Amount (Rs.)</td>
+   54 								<td><input  id="principalAmount" placeholder="Principal Amount" required></td>
+   55 							</tr>
+   56 							<tr>
+   57 								<td>Interest Rate (%)</td>
+   58 							    <td><input  id="interestRate" placeholder="Interest Per Annum" required></td>
+   59 							
+   60 							</tr>
+   61 							<tr>
+   62 								<td>Tenure (in months)</td>
+   63 							    <td><input id="tenure" placeholder="Tenure in Months" required></td>
+   64 							</tr>
+   65 						     
+   66 							<tr>
+   67 							 	<td></td>
+   68 								<td align="left" style="padding: 10px">
+   69 									<input  id="Estimate" type="button" value="Estimate" onclick="EstimateReducingInterestLoan()" >
+   70 								</td>
+   71 							</tr>
+   72 						
+   73 					
+   74 				    	</tbody>
+   75 					</table>
+   76 				  </td>
+   77 			  </tr>	
+   78 		   <tr>
+   79 			  	<td>
+   80 					<table class = "t" >
+   81 						<caption><b>Loan Estimation</b></caption>
+   82 						<tbody>
+   83 						
+   84 							<tr>
+   85 								<td>Total Interest Rs.</td>
+   86 								<td><output id="tInterest"></output></td>
+   87 								<td><output id="tInterestFixed"></output></td>
+   88 								
+   89 							</tr>
+   90 							<tr>
+   91 								<td>Total Payment Rs.</td>
+   92 								<td><output id="tPayment" ></output></td>
+   93 								<td><output id="tPaymentFixed" ></output></td>
+   94 							</tr>
+   95 							<tr>
+   96 								<td>Monthly EMI Rs.</td>
+   97 								<td><output id="EMI"></output></td>
+   98 								<td><output id="EMIFixed"></output></td>
+   99 							</tr>
+  100 						</tbody>
+  101 					</table>
+  102 				</td>
+  103 			</tr>	
+  104 		</tbody>
+  105 	</table>
+  106 	 <script type="text/javascript" src="Estimation.js"></script>
+  107 </body>
+  108 
+  109 </html>
+Estimation.js
+    1 
+    2 var principalAmountVar ;
+    3 var interestRateVar  ;
+    4 var tenure  ;
+    5 var emi;
+    6 var R;
+    7 var totalPaymentVar;
+    8 var totalInterestVar;
+    9 
+   10 function EstimateReducingInterestLoan()
+   11 {
+   12 	principalAmountVar =  Number(document.getElementById("principalAmount").value);
+   13 	interestRateVar = Number(document.getElementById("interestRate").value);
+   14 	tenure = Number(document.getElementById("tenure").value);
+   15 
+   16 	  calculateEMI();
+   17       totalPayment();
+   18       totalInterest();
+   19       EstimateFixedInterestLoan();
+   20 
+   21 }
+   22 
+   23 function EstimateFixedInterestLoan()
+   24 {
+   25     var fi = principalAmountVar * interestRateVar/100 * (tenure/12.00);
+   26     var fp = principalAmountVar + fi;
+   27     var femi = fp/ (tenure);
+   28     
+   29     document.getElementById("tInterestFixed").innerHTML =  (Math.round(fi * 100) / 100).toFixed(2);
+   30     
+   31     document.getElementById("tPaymentFixed").innerHTML =  (Math.round(fp * 100) / 100).toFixed(2);
+   32     
+   33     document.getElementById("EMIFixed").innerHTML = ( Math.round(femi * 100) / 100).toFixed(2); 
+   34     
+   35 }
+   36 
+   37 function calculateEMI(){
+   38     R = (interestRateVar/100)/12;
+   39     //emi = principalAmountVar * R * ((1 + R)^tenure / ((1+R) ^ tenure-1));
+   40     emi = (principalAmountVar * R * (Math.pow((1 + R), tenure) / (Math.pow((1 + R), tenure) - 1)));
+   41     document.getElementById("EMI").innerHTML = Math.round(emi * 100) / 100;
+   42 }
+   43 
+   44 function totalPayment(){
+   45 	totalPaymentVar = emi * tenure;
+   46     document.getElementById("tPayment").innerHTML =  Math.round(totalPaymentVar * 100) / 100;
+   47 }
+   48 
+   49 function totalInterest(){
+   50     totalInterestVar = totalPaymentVar - principalAmountVar;
+   51     document.getElementById("tInterest").innerHTML =  Math.round(totalInterestVar * 100) / 100;
+   52 }
+   53 
+   54 
+   55 

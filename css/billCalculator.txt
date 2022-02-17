@@ -1,0 +1,90 @@
+  1 <!DOCTYPE html>
+    2 <html>
+    3     
+    4     <head>
+    5         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    6         <link rel="stylesheet" href="billcalc.css" type="text/css">
+    7     </head>
+    8     <body>
+    9         
+   10         <h1>Bill Calculator</h1>
+   11         
+   12         <form onsubmit="return calculateTotalPrice()">
+   13             
+   14             <table>
+   15                 <tr>
+   16                     <td>Product Name</td>
+   17                     <td>
+   18                         <input id="productName" placeholder="Product Name" type="text" required>
+   19                     </td>
+   20                 </tr>
+   21                 <tr>
+   22                     <td>Product Price in Rs.</td>
+   23                     <td>
+   24                         <input id="price" placeholder="Product Price" type="number" required>
+   25                     </td>
+   26                 </tr>
+   27                 <tr>
+   28                     <td>Quantity</td>
+   29                     <td>
+   30                         <input id="qty" placeholder="Enter quantity" type="number" required>
+   31                     </td>
+   32                 </tr>
+   33                 <tr>
+   34                     <td>Total Price in Rs.</td>
+   35                     <td>
+   36                         <output id="totalprice" for="price qty" type="number" required></output>
+   37                     </td>
+   38                 </tr>
+   39                 
+   40                 <tr>
+   41                     <td colspan="2">
+   42                         <input type="submit" id="submit">
+   43                     </td>
+   44                 </tr>
+   45             </table>
+   46         
+   47         
+   48         </form>
+   49         
+   50         
+   51         <script>
+   52             function calculateTotalPrice() {
+   53                 document.getElementById("totalprice").innerHTML = document.getElementById("price").value * document.getElementById("qty").value
+   54                 return false;
+   55             }
+   56         </script>
+   57         
+   58         
+   59       
+   60     </body>
+   61     
+   62    
+   63    
+   64  
+   65     
+   66     
+   67     
+   68 </html>
+billcalc.css
+    1 h1{
+    2    text-align:center;
+    3    color:#FF00FF;
+    4    font-style:italic;
+    5    font-weight:bold;
+    6  }
+    7 
+    8  table{
+    9      text-align:left;
+   10      margin-left:35%;
+   11      border-spacing:10px;
+   12      border-width:10%;
+   13      border-style:solid;
+   14      background-color:#F899A4;
+   15      
+   16 
+   17  }
+   18  td{
+   19      border-style:ridge;
+   20      padding:10px;
+   21  }

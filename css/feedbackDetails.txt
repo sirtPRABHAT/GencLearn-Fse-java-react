@@ -1,0 +1,77 @@
+1 <html>
+    2 	<head>
+    3   </head>
+    4   <body> 
+    5     <div style="width: 600px; margin: auto;">
+    6         <h1>Feedback of the ART OF LIVING session</h1>
+    7         <label for="feedback">Enter the Feedback: </label>
+    8         <textarea  id="feedback" name="feedback"  rows="3" cols="30"></textarea><br><br>
+    9         <button id="create" type="button" onclick="addFeedback()" >Add Feedback</button><br><br>
+   10         <button id="view" type="button" onclick="displayFeedback()" >view Feedback</button>
+   11     </div>
+   12     
+   13     <!--<div id="result" style="display: none; width: 350px; border: 4px solid black;" >-->
+   14     <!--    <h2>Feedback Details</h2><br>-->
+   15     <!--    <h3 style="display: none; ">Successfully Added Feedback Details!</h3>-->
+   16     <!--    <div id="result_feedback">-->
+   17 
+   18     <!--    </div>-->
+   19     <!--</div>-->
+   20     
+   21     <div id="result"></div>
+   22     
+   23 
+   24 
+   25     <script src="script.js"> </script>
+   26   </body>
+   27 </html>
+   28 
+script.js
+    1 const feedbacks = [];
+    2 
+    3 // document.getElementById("create").onclick = addFeedback;
+    4 // document.getElementById("view").onclick = displayFeedback;
+    5 // const result_feedback = document.getElementById("result_feedback");
+    6 
+    7 // function addFeedback(){
+    8 //     feedbacks.push(document.getElementById("feedback").value);
+    9 //     document.getElementById("feedback").value = "";
+   10 //     result_feedback.innerHTML = '';
+   11 //     document.getElementById("result").style.display = 'block';
+   12 //     document.querySelector("h3").style.display = 'block';
+   13 // }
+   14 
+   15 // function displayFeedback(){
+   16 //     for(var i=1; i <= feedbacks.length; i++){
+   17 //         const s = "<p> Feedback " + i + "</p> <p>" + feedbacks[i-1] + "</p>";
+   18 //         result_feedback.insertAdjacentHTML("beforeend",s );
+   19 //     }
+   20 //     document.querySelector("h3").style.display = 'none';
+   21 //     document.getElementById("result").style.display = 'block';
+   22 //     feedbacks.length =0;
+   23 // }
+   24 
+   25 function addFeedback() {
+   26     feedbacks.push(document.getElementById("feedback").value);
+   27     document.getElementById("feedback").value = '';
+   28     document.getElementById("result").innerHTML = "<h2>Feedback Details</h2><p><strong>Successfully Added Feedback Details!</strong></p>";
+   29 }
+   30 
+   31 function displayFeedback() {
+   32     var feedbackText = "";
+   33     for (var i = 0; i < feedbacks.length; ++i) {
+   34         if (i !== 0) {
+   35             feedbackText += "<br>";
+   36         }
+   37 
+   38         feedbackText += "Feedback " + (i + 1) + "<br>" + feedbacks[i] + "";
+   39     }
+   40 
+   41      document.getElementById("result").innerHTML = "<h2>Feedback Details</h2>" + "<p>" +
+   42         feedbackText +
+   43         "</p>";
+   44 }
+   45 
+   46 
+   47 
+   48 
